@@ -1,1 +1,74 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index,follow"><meta name="description" content="Noah Stein — Computer Engineer. Projects in embedded systems, neurotechnology, machine learning, and digital design."><meta name="theme-color" content="#15273a"><title>Brain-controlled light switch | Noah Stein</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="wrap"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html">Noah Stein<span>.</span></a><div class="nav-links"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="Noah-Stein-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><a class="contact-link" href="index.html#contact">Let’s connect ↗</a></div></nav></header><main id="main" class="wrap"><article class="project-page"><a class="back" href="index.html#projects">← ALL PROJECTS</a><div class="project-meta" style="margin-top:35px">Embedded systems / Brain–computer interfaces</div><h1>From brain waves to a light switch.</h1><p class="lede">Mind Switch connects a NeuroSky MindWave headset to light control through Python. The uploaded prototype includes direct smart-plug control and a separate ESP32 serial-control path.</p><div class="project-art bci"><span class="art-tag">PYTHON / SYSTEM STUDY</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" role="img" aria-label="Conceptual EEG signal processing and light actuation diagram"><g fill="none" stroke="#9ebbad" stroke-width="1"><path d="M0 87H600M0 175H600M0 263H600M100 0V350M200 0V350M300 0V350M400 0V350M500 0V350"/></g><path d="M46 173H74L85 151L95 195L107 123L119 215L131 166H172" fill="none" stroke="#3b6b55" stroke-width="2"/><rect x="198" y="119" width="137" height="111" rx="4" fill="#183c31"/><g fill="#e1ece3" font-family="monospace" text-anchor="middle"><text x="266" y="167" font-size="20">EEG → LIGHT</text><text x="266" y="194" font-size="10">READ · DECIDE · ACT</text></g><path d="M172 174H198M335 174H420" fill="none" stroke="#3b6b55" stroke-width="2"/><circle cx="452" cy="166" r="34" fill="#f5f2cc" stroke="#567261" stroke-width="2"/><path d="M438 199v17h28v-17M443 221h18M452 129v-12M487 145l12-5M419 145l-12-5" fill="none" stroke="#567261" stroke-width="2"/><g fill="#385344" font-size="10" font-family="monospace"><text x="64" y="263">01 / EEG INPUT</text><text x="208" y="263">02 / PROCESSING</text><text x="407" y="263">03 / ACTUATION</text></g></svg><span class="art-note">CONCEPTUAL ILLUSTRATION</span></div><div class="detail-meta"><span>Python</span><span>MindWave</span><span>Smart plug / ESP32</span><span>Serial parsing</span></div><div class="detail-body"><section><div class="section-number">MY ROLE</div><p>Technical Lead & Lead BCI Developer</p></section><section><h2>The idea</h2><p>Turn EEG-derived attention readings into a simple physical response, exploring how a headset, packet parser, and output device work together.</p></section><section><h2>What the source shows</h2><p>Python reads headset packets and checks their checksums. One script switches a Kasa smart plug when attention crosses 60 and remembers the last requested state. A second script sends ON/OFF commands to an ESP32 over serial.</p></section><section><h2>Two ways to control an output</h2><p>The smart-plug and ESP32 scripts are alternate implementations. A third script tests the plug by switching it off and on. The project includes three Python scripts for control and hardware testing.</p></section></div><aside class="project-status"><strong>Completed project</strong>A completed prototype exploring EEG-derived attention and physical device control.</aside><p><a class="text-link" href="https://github.com/nakosa6292/brain-controlled-light-switch" target="_blank" rel="noopener">View project source on GitHub ↗</a></p><div class="detail-next"><a href="index.html#projects">← Back to selected work</a><a href="motor-imagery-eeg.html">Next project →</a></div></article></main><footer class="footer"><div class="wrap"><span>© 2026 Noah Stein</span><span>Curious about how things work. Interested in what comes next.</span><a href="index.html">Back to home ↑</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Noah Stein — Computer Engineer. Projects in embedded systems, neurotechnology, machine learning, and digital design.">
+    <meta name="theme-color" content="#15273a">
+    <title>Brain-controlled light switch | Noah Stein</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">Noah Stein<span>.</span></a>
+        <div class="nav-links">
+          <a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="Noah-Stein-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><a class="contact-link" href="index.html#contact">Let’s connect ↗</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <article class="project-page">
+        <a class="back" href="index.html#projects">← ALL PROJECTS</a>
+        <div class="project-meta" style="margin-top:35px">
+          Embedded systems / Brain–computer interfaces
+        </div>
+        <h1>From brain waves to a light switch.</h1>
+        <p class="lede">Mind Switch connects a NeuroSky MindWave headset to light control through Python. The uploaded prototype includes direct smart-plug control and a separate ESP32 serial-control path.</p>
+        <div class="project-art bci">
+          <span class="art-tag">PYTHON / SYSTEM STUDY</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" role="img" aria-label="Conceptual EEG signal processing and light actuation diagram"><g fill="none" stroke="#9ebbad" stroke-width="1"><path d="M0 87H600M0 175H600M0 263H600M100 0V350M200 0V350M300 0V350M400 0V350M500 0V350"/></g><path d="M46 173H74L85 151L95 195L107 123L119 215L131 166H172" fill="none" stroke="#3b6b55" stroke-width="2"/><rect x="198" y="119" width="137" height="111" rx="4" fill="#183c31"/><g fill="#e1ece3" font-family="monospace" text-anchor="middle"><text x="266" y="167" font-size="20">EEG → LIGHT</text><text x="266" y="194" font-size="10">READ · DECIDE · ACT</text></g><path d="M172 174H198M335 174H420" fill="none" stroke="#3b6b55" stroke-width="2"/><circle cx="452" cy="166" r="34" fill="#f5f2cc" stroke="#567261" stroke-width="2"/><path d="M438 199v17h28v-17M443 221h18M452 129v-12M487 145l12-5M419 145l-12-5" fill="none" stroke="#567261" stroke-width="2"/><g fill="#385344" font-size="10" font-family="monospace"><text x="64" y="263">01 / EEG INPUT</text><text x="208" y="263">02 / PROCESSING</text><text x="407" y="263">03 / ACTUATION</text></g></svg>
+          <span class="art-note">CONCEPTUAL ILLUSTRATION</span>
+        </div>
+        <div class="detail-meta">
+          <span>Python</span><span>MindWave</span><span>Smart plug / ESP32</span><span>Serial parsing</span>
+        </div>
+        <div class="detail-body">
+          <section>
+            <div class="section-number">
+              MY ROLE
+            </div>
+            <p>Technical Lead & Lead BCI Developer</p>
+          </section>
+          <section>
+            <h2>The idea</h2>
+            <p>Turn EEG-derived attention readings into a simple physical response, exploring how a headset, packet parser, and output device work together.</p>
+          </section>
+          <section>
+            <h2>What the source shows</h2>
+            <p>Python reads headset packets and checks their checksums. One script switches a Kasa smart plug when attention crosses 60 and remembers the last requested state. A second script sends ON/OFF commands to an ESP32 over serial.</p>
+          </section>
+          <section>
+            <h2>Two ways to control an output</h2>
+            <p>The smart-plug and ESP32 scripts are alternate implementations. A third script tests the plug by switching it off and on. The project includes three Python scripts for control and hardware testing.</p>
+          </section>
+        </div>
+        <aside class="project-status">
+          <strong>Completed project</strong>A completed prototype exploring EEG-derived attention and physical device control.
+        </aside>
+        <p><a class="text-link" href="https://github.com/nakosa6292/brain-controlled-light-switch" target="_blank" rel="noopener">View project source on GitHub ↗</a></p>
+        <div class="detail-next">
+          <a href="index.html#projects">← Back to selected work</a><a href="motor-imagery-eeg.html">Next project →</a>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <span>© 2026 Noah Stein</span><span>Curious about how things work. Interested in what comes next.</span><a href="index.html">Back to home ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
